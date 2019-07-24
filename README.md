@@ -18,6 +18,7 @@ final.crabs_pt1 <- final.crabs_pt1[,c(4,2,7,8)]
 head(final.crabs_pt1)
 
 ##regularize tracks so total nDetections can be determined and <100 tags can be removed
+
 crwOut1 <- crawlWrap(obsData = final.crabs_pt1, timeStep = "30 mins", theta = c(2, -0.001), fixPar = c(NA,NA))
 crabs1 <- prepData(crwOut1) 
 
